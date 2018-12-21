@@ -1,0 +1,52 @@
+{
+  "name": "VLWProductDesigner.github.io",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/VLWProductDesigner/VLWProductDesigner.github.io",
+  "author": "ActiveEvil <active_evil@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.0.53",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-json": "^2.1.6",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "prettier": "^1.15.2",
+    "prop-types": "^15.6.2",
+    "react-test-renderer": "^16.6.3",
+    "regenerator-runtime": "^0.13.1"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "yarn run develop",
+    "format": "prettier --write \"src/**/*.js*\"",
+    "test": "jest --coverage --verbose"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/setup/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/public/",
+      "<rootDir>/node_modules/"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup/",
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  }
+}
