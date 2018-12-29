@@ -12,7 +12,10 @@ class ProjectTeaser extends React.Component {
       <article style={{ backgroundColor: content.bgColour }}>
         <Link to={content.route}>
           {image && (
-            <Img alt={content.title} fluid={image.childImageSharp.fluid} />
+            <Img
+              alt={content.title}
+              fluid={image.childImageSharp.fluid}
+            />
           )}
           <h2>{content.title}</h2>
         </Link>

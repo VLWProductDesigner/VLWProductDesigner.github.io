@@ -2,13 +2,49 @@
   {
     "id": "yyw",
     "title": "You & Your Wedding",
+    "description": "UI Design lead on major projects for key specialist publishing brands including You & Your Wedding and Gardeners’ World with an increase in key metrics after initial launches. Collaborated closely with UX architects product leads, editorial, and the development teams to deliver products meeting a range of commercial objectives including new business models and advertising solutions. Worked with multiple teams across both editorial and advertising sectors with important commercial partners. Frequently presented and reviewed design work across the business. Mentored other designers within the team including sharing learning from adopting Sketch & InVision. Worked with strict brand guidelines from our key partners. Developed design systems for an integrated workflow using InVision. Honoured to have been recognised with a nomination for designer of the year across the company.",
+    "images": [
+      {
+        "id": "articles",
+        "alt": "Articles"
+      },
+      {
+        "id": "dressFinder",
+        "alt": "Dress Finder"
+      },
+      {
+        "id": "galleries",
+        "alt": "Galleries"
+      },
+      {
+        "id": "homePage",
+        "alt": "Home Page"
+      },
+      {
+        "id": "navigation1",
+        "alt": "Navigation"
+      },
+      {
+        "id": "navigation2",
+        "alt": "Navigation"
+      },
+      {
+        "id": "styleGuide",
+        "alt": "Style Guide"
+      },
+      {
+        "id": "venuesPage",
+        "alt": "Venues Page"
+      }
+    ],
     "bgColour": "#eee",
-    "route": "/"
+    "route": "/projects/you-and-your-wedding"
   },
   {
     "id": "beamly",
     "title": "Beamly",
+    "description": "",
     "bgColour": "#ccc",
-    "route": "/"
+    "route": "/projects/beamly"
   }
 ]

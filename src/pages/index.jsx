@@ -20,12 +20,12 @@ class IndexPage extends React.Component {
               }
             }
             yyw: file(
-              relativePath: { eq: "projects/you-and-your-wedding.jpg" }
+              relativePath: { eq: "teasers/you-and-your-wedding.jpg" }
             ) {
               ...fluidImage
             }
             beamly: file(
-              relativePath: { eq: "projects/you-and-your-wedding.jpg" }
+              relativePath: { eq: "teasers/you-and-your-wedding.jpg" }
             ) {
               ...fluidImage
             }
