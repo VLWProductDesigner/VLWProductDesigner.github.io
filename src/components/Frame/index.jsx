@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-// import style from './style.css';
+import Headroom from 'react-headroom'
+import style from './style.module.css'
 import Header from '../Header/'
 import Nav from '../Nav/'
 import Footer from '../Footer/'
@@ -35,6 +36,7 @@ class Frame extends React.Component {
         render={data => {
           const siteMetadata = data.site.siteMetadata
           const navItems = data.allNavJson.edges
+
           return (
             <React.Fragment>
               <Helmet
@@ -46,13 +48,19 @@ class Frame extends React.Component {
               >
                 <html lang="en-GB" />
               </Helmet>
-              <Header
-                title={siteMetadata.title}
-                tagline={siteMetadata.tagline}
-              />
-              <Nav items={navItems} />
-              <section>{children}</section>
-              <Footer copyright={siteMetadata.copyright} />
+              <section className={style.frame}>
+                <Headroom disableInlineStyles>
+                  <section className={style.header}>
+                    <Header
+                      title={siteMetadata.title}
+                      tagline={siteMetadata.tagline}
+                    />
+                    <Nav items={navItems} />
+                  </section>
+                </Headroom>
+                <section className={style.page}>{children}</section>
+                <Footer copyright={siteMetadata.copyright} />
+              </section>
             </React.Fragment>
           )
         }}

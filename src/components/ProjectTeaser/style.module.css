@@ -1,0 +1,77 @@
+.teaser
+{
+    order: 1;
+
+    width: calc(100% / 3);
+
+    transition: all .3s ease-in-out;
+}
+
+.link
+{
+    display: block;
+
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.title
+{
+    display: none;
+}
+
+@media (max-width: 1024px)
+{
+    .teaser
+    {
+        width: 50%;
+    }
+
+    .yyw
+    {
+        order: 0;
+    }
+
+    .beamly
+    {
+        order: 1;
+    }
+
+    .sohoHouse
+    {
+        order: 2;
+    }
+
+    .asos
+    {
+        order: 3;
+    }
+
+    .surfaceView
+    {
+        order: 4;
+    }
+
+    .engage
+    {
+        order: 5;
+    }
+
+    .no1Traveller
+    {
+        order: 6;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .teaser
+    {
+        width: 100%;
+    }
+
+    .asos
+    {
+        order: 0;
+    }
+}

@@ -9,7 +9,7 @@ class ContactPage extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            projectsJson(id: {eq: "yyw"}) {
+            projectsJson(id: { eq: "yyw" }) {
               title
               description
               images {
@@ -17,44 +17,28 @@ class ContactPage extends React.Component {
                 alt
               }
             }
-            articles: file(
-              relativePath: { eq: "yyw/articles.jpg" }
-            ) {
+            articles: file(relativePath: { eq: "yyw/articles.jpg" }) {
               ...fluidImage
             }
-            dressFinder: file(
-              relativePath: { eq: "yyw/dress-finder.jpg" }
-            ) {
+            dressFinder: file(relativePath: { eq: "yyw/dress-finder.jpg" }) {
               ...fluidImage
             }
-            galleries: file(
-              relativePath: { eq: "yyw/galleries.jpg" }
-            ) {
+            galleries: file(relativePath: { eq: "yyw/galleries.jpg" }) {
               ...fluidImage
             }
-            homePage: file(
-              relativePath: { eq: "yyw/home-page.jpg" }
-            ) {
+            homePage: file(relativePath: { eq: "yyw/home-page.jpg" }) {
               ...fluidImage
             }
-            navigation1: file(
-              relativePath: { eq: "yyw/navigation-1.jpg" }
-            ) {
+            navigation1: file(relativePath: { eq: "yyw/navigation-1.jpg" }) {
               ...fluidImage
             }
-            navigation2: file(
-              relativePath: { eq: "yyw/navigation-2.jpg" }
-            ) {
+            navigation2: file(relativePath: { eq: "yyw/navigation-2.jpg" }) {
               ...fluidImage
             }
-            styleGuide: file(
-              relativePath: { eq: "yyw/style-guide.jpg" }
-            ) {
+            styleGuide: file(relativePath: { eq: "yyw/style-guide.jpg" }) {
               ...fluidImage
             }
-            venuesPage: file(
-              relativePath: { eq: "yyw/venues-page.jpg" }
-            ) {
+            venuesPage: file(relativePath: { eq: "yyw/venues-page.jpg" }) {
               ...fluidImage
             }
           }
@@ -73,6 +57,7 @@ class ContactPage extends React.Component {
                     <Img
                       key={image.id}
                       alt={image.alt}
+                      className={'test'}
                       fluid={data[image.id].childImageSharp.fluid}
                     />
                   ))}

@@ -1,0 +1,32 @@
+.list
+{
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.item + .item
+{
+    margin-left: 20px;
+}
+
+.link
+{
+    font-size: 14px;
+
+    padding-bottom: 2px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #8a8a8a;
+}
+
+.link.isActive
+{
+    color: #222;
+    border-bottom: 1px solid #222;
+}

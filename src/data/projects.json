@@ -37,14 +37,49 @@
         "alt": "Venues Page"
       }
     ],
-    "bgColour": "#eee",
+    "bgColour": "#310738",
     "route": "/projects/you-and-your-wedding"
+  },
+  {
+    "id": "sohoHouse",
+    "title": "Soho House",
+    "description": "",
+    "bgColour": "#E9E8E8",
+    "route": "/projects/soho-house"
+  },
+  {
+    "id": "asos",
+    "title": "ASOS",
+    "description": "",
+    "bgColour": "#F1B3CD",
+    "route": "/projects/asos"
+  },
+  {
+    "id": "engage",
+    "title": "Engage",
+    "description": "",
+    "bgColour": "#FFFFFF",
+    "route": "/projects/engage"
   },
   {
     "id": "beamly",
     "title": "Beamly",
     "description": "",
-    "bgColour": "#ccc",
+    "bgColour": "#FFE6F9",
     "route": "/projects/beamly"
+  },
+  {
+    "id": "surfaceView",
+    "title": "Surface View",
+    "description": "",
+    "bgColour": "#2d2d2d",
+    "route": "/projects/surface-view"
+  },
+  {
+    "id": "no1Traveller",
+    "title": "No1 Traveller",
+    "description": "",
+    "bgColour": "#DEFBFF",
+    "route": "/projects/no1-traveller"
   }
 ]

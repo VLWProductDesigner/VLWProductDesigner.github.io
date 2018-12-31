@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Vicki Louise Ward',
-    tagline: 'UX/UI Designer',
-    copyright: 'Copyright © Vicki Louise Ward',
+    tagline: 'Product Designer',
+    copyright: `Copyright © ${new Date().getFullYear()} Vicki Louise Ward`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

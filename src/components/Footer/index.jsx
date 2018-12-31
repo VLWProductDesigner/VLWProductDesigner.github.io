@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import style from './style.css';
+import style from './style.module.css'
 
 class Footer extends React.Component {
   render() {
     const { copyright } = this.props
     return (
-      <footer>
-        <p>{copyright}</p>
+      <footer className={style.footer}>
+        <p className={style.copyright}>{copyright}</p>
       </footer>
     )
   }

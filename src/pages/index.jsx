@@ -2,8 +2,47 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Frame from '../components/Frame'
 import ProjectTeaser from '../components/ProjectTeaser'
+import style from '../styles/homePage.module.css'
+import debounce from '../utilities/debounce'
 
 class IndexPage extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.masonaryElement = React.createRef()
+    this.masonary = this.masonary.bind(this)
+  }
+
+  masonary() {
+    const node = this.masonaryElement.current
+    const setNodeHeight = debounce(() => {
+      const nodeWidth = node.getBoundingClientRect().width
+
+      switch (true) {
+        case window.matchMedia('screen and (min-width: 1024px)').matches:
+          node.style.height = `${nodeWidth * 0.87}px`
+          break
+        case window.matchMedia(
+          'screen and (max-width: 1024px) and (min-width: 768px)'
+        ).matches:
+          node.style.height = `${nodeWidth * 2.02}px`
+          break
+        default:
+          node.style.height = 'auto'
+      }
+
+      node.classList.add(style.isLoaded)
+    }, 250)
+
+    setNodeHeight()
+
+    window.addEventListener('resize', setNodeHeight)
+  }
+
+  componentDidMount() {
+    this.masonary()
+  }
+
   render() {
     return (
       <StaticQuery
@@ -19,13 +58,30 @@ class IndexPage extends React.Component {
                 }
               }
             }
-            yyw: file(
-              relativePath: { eq: "teasers/you-and-your-wedding.jpg" }
+            asos: file(relativePath: { eq: "teasers/asos.png" }) {
+              ...fluidImage
+            }
+            beamly: file(relativePath: { eq: "teasers/beamly.png" }) {
+              ...fluidImage
+            }
+            engage: file(relativePath: { eq: "teasers/engage.png" }) {
+              ...fluidImage
+            }
+            no1Traveller: file(
+              relativePath: { eq: "teasers/no1-traveller.png" }
             ) {
               ...fluidImage
             }
-            beamly: file(
-              relativePath: { eq: "teasers/you-and-your-wedding.jpg" }
+            sohoHouse: file(relativePath: { eq: "teasers/soho-house.png" }) {
+              ...fluidImage
+            }
+            surfaceView: file(
+              relativePath: { eq: "teasers/surface-view.png" }
+            ) {
+              ...fluidImage
+            }
+            yyw: file(
+              relativePath: { eq: "teasers/you-and-your-wedding.png" }
             ) {
               ...fluidImage
             }
@@ -35,13 +91,15 @@ class IndexPage extends React.Component {
           const projects = data.allProjectsJson.edges
           return (
             <Frame>
-              {projects.map(project => (
-                <ProjectTeaser
-                  key={project.node.id}
-                  content={project.node}
-                  image={data[project.node.id]}
-                />
-              ))}
+              <section ref={this.masonaryElement} className={style.container}>
+                {projects.map(project => (
+                  <ProjectTeaser
+                    key={project.node.id}
+                    content={project.node}
+                    image={data[project.node.id]}
+                  />
+                ))}
+              </section>
             </Frame>
           )
         }}

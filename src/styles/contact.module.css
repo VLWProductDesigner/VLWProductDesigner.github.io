@@ -1,0 +1,28 @@
+.container
+{
+    font-style: normal;
+
+    box-sizing: border-box;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 65px 30px 30px;
+
+    color: #454545;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact
+{
+    margin: 20px 0 auto;
+}
+
+.link
+{
+    display: inline-block;
+
+    margin: 20px 0 auto;
+
+    text-decoration: none;
+
+    color: #1f1f1f;
+}

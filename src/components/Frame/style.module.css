@@ -1,0 +1,74 @@
+:global(body)
+{
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: .05em;
+}
+
+:global(.headroom)
+{
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    transform: translateY(0);
+}
+
+:global(.headroom--unfixed)
+{
+    position: relative;
+
+    transform: translateY(0);
+}
+
+:global(.headroom--scrolled)
+{
+    transition: .3s ease-in-out 0s;
+}
+
+:global(.headroom--unpinned)
+{
+    position: fixed;
+
+    transform: translateY(-100%);
+}
+
+:global(.headroom--pinned)
+{
+    position: fixed;
+
+    transform: translateY(0);
+}
+
+.frame
+{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+.header
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 35px;
+
+    background-color: #fff;
+}
+
+.page
+{
+    flex: 1 0 auto;
+}

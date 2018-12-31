@@ -8,7 +8,7 @@ class ContactPage extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            projectsJson(id: {eq: "beamly"}) {
+            projectsJson(id: { eq: "beamly" }) {
               title
               description
             }
@@ -23,9 +23,7 @@ class ContactPage extends React.Component {
                   <h1>{content.title}</h1>
                   <p>{content.description}</p>
                 </section>
-                <section>
-
-                </section>
+                <section />
               </article>
             </Frame>
           )
