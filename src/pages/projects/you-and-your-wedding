@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import Frame from '../../components/Frame'
+import ProjectFeature from '../../components/ProjectFeature'
 
 class ContactPage extends React.Component {
   render() {
@@ -45,24 +45,14 @@ class ContactPage extends React.Component {
         `}
         render={data => {
           const content = data.projectsJson
+
+          content.images.forEach(
+            image => (image.childImageSharp = data[image.id].childImageSharp)
+          )
+
           return (
             <Frame>
-              <article>
-                <section>
-                  <h1>{content.title}</h1>
-                  <p>{content.description}</p>
-                </section>
-                <section>
-                  {content.images.map(image => (
-                    <Img
-                      key={image.id}
-                      alt={image.alt}
-                      className={'test'}
-                      fluid={data[image.id].childImageSharp.fluid}
-                    />
-                  ))}
-                </section>
-              </article>
+              <ProjectFeature content={content} />
             </Frame>
           )
         }}

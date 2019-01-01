@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Frame from '../components/Frame'
-import style from '../styles/contact.module.css'
+import styles from '../styles/contact.module.css'
 
 class ContactPage extends React.Component {
   render() {
@@ -24,14 +24,14 @@ class ContactPage extends React.Component {
           const contactInfo = data.allContactJson.edges
           return (
             <Frame>
-              <address className={style.container}>
+              <address className={styles.container}>
                 {contactInfo.map(contact => {
                   if (contact.node.method === 'LinkedIn') {
                     return (
                       <Link
                         key={contact.node.id}
                         to={contact.node.value}
-                        className={style.link}
+                        className={styles.link}
                       >
                         {contact.node.method}
                       </Link>
@@ -39,7 +39,7 @@ class ContactPage extends React.Component {
                   }
 
                   return (
-                    <p key={contact.node.id} className={style.contact}>
+                    <p key={contact.node.id} className={styles.contact}>
                       {contact.node.method} | {contact.node.value}
                     </p>
                   )

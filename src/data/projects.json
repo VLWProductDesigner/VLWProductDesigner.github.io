@@ -50,7 +50,129 @@
   {
     "id": "asos",
     "title": "ASOS",
-    "description": "",
+    "description": "Lead on creating as resuable suit of content manageble scms components for brand, retail and marketing teams to use to create custom pages for business, articles and campaigns. worked closely with team to meet business and user needs, through workshops and refinement sessions and presented new ideas and existing to users to gain better understanding. This invovled looking at flexible designs that worked for multiple pages. As part of the ASOS responsive role out I was resposible for comuicating to both development teams and the marketing teams new designs and what to expect trhough each breakpoint, Helping the transition from text in imagery to using live text and creating assets that scaled or swapped out to get the best experince. This effected homepage, campaigns, business pages and articles. Having been the bridge between marketing and tech for alot of UIUX I have supported marketing teams in planning campaigns as well as educating a more user centered approach, taking into conisderations flows and accessabitly. Focusing on content and the makerketing side of the ASOS proposition I have worked on projects that look at how we can better intergrate useful and informative content into the user jouney, Exploring what, feeds, video and other shoppable UX pattern exist, Presenting new ideas and inotive product sto teh board. Part of this has meant deep diving into content types and stratagy to help understand better what a user is looking for in order to make a purchase. Working in a large UIUX team we are constantly communicating new designs and patterns and follow a collabrative design system.",
+    "examples": [
+      {
+        "title": "Marketing & content components",
+        "images": [
+          {
+            "id": "sitecoreInSitu1",
+            "alt": "",
+            "bgColour": "#f1b3cd"
+          },
+          {
+            "id": "sitecoreZeplin",
+            "alt": "",
+            "bgColour": "#f6f3f3"
+          },
+          {
+            "id": "sitecoreInSitu2",
+            "alt": "",
+            "bgColour": "#f1b3cd"
+          },
+          {
+            "id": "sitecorePhotos",
+            "alt": "",
+            "bgColour": "#f6f3f3"
+          }
+        ]
+      },
+      {
+        "title": "Video component",
+        "images": [
+          {
+            "id": "videoInSitu",
+            "alt": "",
+            "bgColour": "#defbff"
+          },
+          {
+            "id": "videoFlow",
+            "alt": "",
+            "bgColour": "#edf3f4"
+          },
+          {
+            "id": "videoMuMobileFlow",
+            "alt": "",
+            "bgColour": "#defbff"
+          },
+          {
+            "id": "videoAccessibiltySettings",
+            "alt": "",
+            "bgColour": "#edf3f4"
+          }
+        ]
+      },
+      {
+        "title": "UI exploration - Discover feed",
+        "images": [
+          {
+            "id": "uiExplorationPhotos",
+            "alt": "",
+            "bgColour": "#f3eff7"
+          },
+          {
+            "id": "uiExploration1",
+            "alt": "",
+            "bgColour": "#827291"
+          },
+          {
+            "id": "uiExploration2",
+            "alt": "",
+            "bgColour": "#f3eff7"
+          },
+          {
+            "id": "uiExploration3",
+            "alt": "",
+            "bgColour": "#827291"
+          }
+        ]
+      },
+      {
+        "title": "Saved - Style and match",
+        "images": [
+          {
+            "id": "savedMatchStyleFlow",
+            "alt": "Navigation",
+            "bgColour": ""
+          }
+        ]
+      },
+      {
+        "title": "Product listing page headers",
+        "images": [
+          {
+            "id": "header",
+            "alt": "PLP Header",
+            "bgColour": "#929fe0"
+          },
+          {
+            "id": "headerInSitu",
+            "alt": "Galleries",
+            "bgColour": "#e9ebf4"
+          },
+          {
+            "id": "headerTests",
+            "alt": "Galleries",
+            "bgColour": "#929fe0"
+          }
+        ]
+      },
+      {
+        "title": "Fashion Discovery application",
+        "images": [
+          {
+            "id": "fashionDiscovery1",
+            "alt": "Articles",
+            "bgColour": "#fbf6ee"
+          },
+          {
+            "id": "fashionDiscovery2",
+            "alt": "Dress Finder",
+            "bgColour": "#ffd184"
+          }
+        ]
+      }
+    ],
     "bgColour": "#F1B3CD",
     "route": "/projects/asos"
   },

@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { Location } from '@reach/router';
-import style from './style.module.css'
+import { Location } from '@reach/router'
+import styles from './style.module.css'
 
 class Nav extends React.Component {
   render() {
@@ -11,14 +11,14 @@ class Nav extends React.Component {
       <Location>
         {({ location }) => (
           <nav>
-            <ul className={style.list}>
+            <ul className={styles.list}>
               {items.map(item => (
-                <li key={item.node.id} className={style.item}>
+                <li key={item.node.id} className={styles.item}>
                   <Link
                     to={item.node.route}
-                    className={`${style.link} ${
+                    className={`${styles.link} ${
                       location.pathname === item.node.route
-                        ? style.isActive
+                        ? styles.isActive
                         : ''
                     }`}
                   >
@@ -29,7 +29,7 @@ class Nav extends React.Component {
             </ul>
           </nav>
         )}
-       </Location>
+      </Location>
     )
   }
 }

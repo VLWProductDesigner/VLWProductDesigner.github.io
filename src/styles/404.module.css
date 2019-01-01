@@ -1,0 +1,25 @@
+.container
+{
+    font-style: normal;
+
+    box-sizing: border-box;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 65px 30px 30px;
+
+    color: #454545;
+    border-bottom: 1px solid #ccc;
+}
+
+.title
+{
+    font-size: 40px;
+    font-weight: 200;
+
+    margin: 0 auto;
+}
+
+.copy
+{
+    margin: 30px auto 0;
+}

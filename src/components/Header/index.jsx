@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import style from './style.module.css'
+import styles from './style.module.css'
 
 class Header extends React.Component {
   render() {
     const { title, tagline } = this.props
     return (
-      <header className={style.header}>
-        <h1 className={style.title}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>
           <svg
             width="288px"
             height="46px"
@@ -36,7 +36,7 @@ class Header extends React.Component {
             </g>
           </svg>
         </h1>
-        <p className={style.tagline}>{tagline}</p>
+        <p className={styles.tagline}>{tagline}</p>
       </header>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Frame from '../components/Frame'
 import ProjectTeaser from '../components/ProjectTeaser'
-import style from '../styles/homePage.module.css'
+import styles from '../styles/homePage.module.css'
 import debounce from '../utilities/debounce'
 
 class IndexPage extends React.Component {
@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
 
       switch (true) {
         case window.matchMedia('screen and (min-width: 1024px)').matches:
-          node.style.height = `${nodeWidth * 0.87}px`
+          node.style.height = `${nodeWidth * 0.9}px`
           break
         case window.matchMedia(
           'screen and (max-width: 1024px) and (min-width: 768px)'
@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
           node.style.height = 'auto'
       }
 
-      node.classList.add(style.isLoaded)
+      node.classList.add(styles.isLoaded)
     }, 250)
 
     setNodeHeight()
@@ -91,7 +91,7 @@ class IndexPage extends React.Component {
           const projects = data.allProjectsJson.edges
           return (
             <Frame>
-              <section ref={this.masonaryElement} className={style.container}>
+              <section ref={this.masonaryElement} className={styles.container}>
                 {projects.map(project => (
                   <ProjectTeaser
                     key={project.node.id}

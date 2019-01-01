@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Headroom from 'react-headroom'
-import style from './style.module.css'
+import styles from './style.module.css'
 import Header from '../Header/'
 import Nav from '../Nav/'
 import Footer from '../Footer/'
@@ -48,9 +48,9 @@ class Frame extends React.Component {
               >
                 <html lang="en-GB" />
               </Helmet>
-              <section className={style.frame}>
+              <section className={styles.frame}>
                 <Headroom disableInlineStyles>
-                  <section className={style.header}>
+                  <section className={styles.header}>
                     <Header
                       title={siteMetadata.title}
                       tagline={siteMetadata.tagline}
@@ -58,7 +58,7 @@ class Frame extends React.Component {
                     <Nav items={navItems} />
                   </section>
                 </Headroom>
-                <section className={style.page}>{children}</section>
+                <section className={styles.page}>{children}</section>
                 <Footer copyright={siteMetadata.copyright} />
               </section>
             </React.Fragment>
