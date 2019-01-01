@@ -1,1 +1,0 @@
-{"errors":[{"message":"Invalid flags supplied to RegExp constructor '?)*$'","locations":[{"line":12,"column":3}],"path":["teaserImages"]}],"data":{"allProjectsJson":{"edges":[{"node":{"id":"yyw","title":"You & Your Wedding","bgColour":"#eee","route":"/"}},{"node":{"id":"beamly","title":"Beamly","bgColour":"#ccc","route":"/"}}]},"teaserImages":null}}
