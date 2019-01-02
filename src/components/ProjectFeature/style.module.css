@@ -20,6 +20,7 @@
 {
     font-size: 40px;
     font-weight: 200;
+    line-height: 1.2;
 
     margin: 0 auto;
 }
@@ -44,7 +45,7 @@
 
 .example > div > div
 {
-  padding-left: 44px;
+    padding-left: 44px;
 }
 
 .images
@@ -64,8 +65,8 @@
     font-size: 16px;
     font-weight: 400;
 
-    padding: 80px 0 0 20px;
     margin: 0;
+    padding: 80px 0 0 20px;
 
     writing-mode: vertical-lr;
 }

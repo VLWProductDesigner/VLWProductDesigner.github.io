@@ -2,6 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Frame from '../../components/Frame'
 import ProjectFeature from '../../components/ProjectFeature'
+import Masonary from '../../components/Masonary'
 
 class Project extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class Project extends React.Component {
                   id
                   alt
                   bgColour
+                  padding
                 }
               }
             }
@@ -117,6 +119,7 @@ class Project extends React.Component {
           return (
             <Frame>
               <ProjectFeature content={content} />
+              <Masonary />
             </Frame>
           )
         }}

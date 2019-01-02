@@ -8,7 +8,9 @@ class NotFoundPage extends React.Component {
       <Frame>
         <section className={styles.container}>
           <h1 className={styles.title}>NOT FOUND</h1>
-          <p className={styles.copy}>You just hit a route that doesn&#39;t exist... the sadness.</p>
+          <p className={styles.copy}>
+            You just hit a route that doesn&#39;t exist... the sadness.
+          </p>
         </section>
       </Frame>
     )

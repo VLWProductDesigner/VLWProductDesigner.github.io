@@ -2,7 +2,7 @@ export const simpleImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
       fluid {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
   }

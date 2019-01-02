@@ -73,4 +73,18 @@
 .page
 {
     flex: 1 0 auto;
+    animation: FadeIn .7s ease-in-out forwards;
+}
+
+@keyframes FadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
 }

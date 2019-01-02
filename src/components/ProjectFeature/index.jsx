@@ -17,14 +17,16 @@ class ProjectTeaser extends React.Component {
           {content.examples.map((example, index) => (
             <StickyContainer key={index} className={styles.example}>
               <section className={styles.images}>
-                {example.images.map((image, index) => (
+                {example.images.map(image => (
                   <div
-                    key={index}
+                    key={image.id}
                     className={styles.imageWrapper}
-                    style={{ backgroundColor: image.bgColour }}
+                    style={{
+                      backgroundColor: image.bgColour,
+                      padding: image.padding,
+                    }}
                   >
                     <Img
-                      key={image.id}
                       alt={image.alt}
                       className={'test'}
                       fluid={image.childImageSharp.fluid}
@@ -34,7 +36,11 @@ class ProjectTeaser extends React.Component {
               </section>
 
               <Sticky bottomOffset={80}>
-                {({style}) => <h2 style={style} className={styles.subtitle}>{example.title}</h2>}
+                {({ style }) => (
+                  <h2 style={style} className={styles.subtitle}>
+                    {example.title}
+                  </h2>
+                )}
               </Sticky>
             </StickyContainer>
           ))}
