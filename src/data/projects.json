@@ -3,6 +3,20 @@
     "id": "immediate",
     "title": "Immediate Media",
     "description": "UI Design lead on major projects for key specialist publishing brands including You & Your Wedding and Gardeners’ World with an increase in key metrics after initial launches. Collaborated closely with UX architects product leads, editorial, and the development teams to deliver products meeting a range of commercial objectives including new business models and advertising solutions. Worked with multiple teams across both editorial and advertising sectors with important commercial partners. Frequently presented and reviewed design work across the business. Mentored other designers within the team including sharing learning from adopting Sketch & InVision. Worked with strict brand guidelines from our key partners. Developed design systems for an integrated workflow using InVision. Honoured to have been recognised with a nomination for designer of the year across the company.",
+    "links": [
+      {
+        "text": "youandyourwedding.co.uk",
+        "href": "https://www.youandyourwedding.co.uk/"
+      },
+      {
+        "text": "gardenersworld.com",
+        "href": "https://www.gardenersworld.com/"
+      },
+      {
+        "text": "olivemagazine.com",
+        "href": "https://www.olivemagazine.com/"
+      }
+    ],
     "examples": [
       {
         "title": "You & Your Wedding homepage",
@@ -77,13 +91,26 @@
     "id": "sohoHouse",
     "title": "Soho House",
     "description": "",
+    "links": [
+      {
+        "text": "asos.com",
+        "href": "https://www.asos.com/"
+      }
+    ],
     "bgColour": "#E9E8E8",
-    "route": "/projects/soho-house"
+    "route": "/projects/soho-house",
+    "disabled": true
   },
   {
     "id": "asos",
     "title": "ASOS",
     "description": "Lead on creating as resuable suit of content manageble scms components for brand, retail and marketing teams to use to create custom pages for business, articles and campaigns. worked closely with team to meet business and user needs, through workshops and refinement sessions and presented new ideas and existing to users to gain better understanding. This invovled looking at flexible designs that worked for multiple pages. As part of the ASOS responsive role out I was resposible for comuicating to both development teams and the marketing teams new designs and what to expect trhough each breakpoint, Helping the transition from text in imagery to using live text and creating assets that scaled or swapped out to get the best experince. This effected homepage, campaigns, business pages and articles. Having been the bridge between marketing and tech for alot of UIUX I have supported marketing teams in planning campaigns as well as educating a more user centered approach, taking into conisderations flows and accessabitly. Focusing on content and the makerketing side of the ASOS proposition I have worked on projects that look at how we can better intergrate useful and informative content into the user jouney, Exploring what, feeds, video and other shoppable UX pattern exist, Presenting new ideas and inotive product sto teh board. Part of this has meant deep diving into content types and stratagy to help understand better what a user is looking for in order to make a purchase. Working in a large UIUX team we are constantly communicating new designs and patterns and follow a collabrative design system.",
+    "links": [
+      {
+        "text": "asos.com",
+        "href": "https://www.asos.com/"
+      }
+    ],
     "examples": [
       {
         "title": "Marketing & content components",
@@ -215,12 +242,19 @@
     "title": "Engage",
     "description": "",
     "bgColour": "#FFFFFF",
-    "route": "/projects/engage"
+    "route": "/projects/engage",
+    "disabled": true
   },
   {
     "id": "beamly",
     "title": "Beamly",
     "description": "Leading digital content design and contributing to creative direction with the aim of making Beamly addictive and the “go-to” social network for TV. Day-to-day activities include, conceiving, designing and delivering a broad array of visuals including: show branding, editorial content, email templates, Image treatments, app release marking, concept design for pitches to broadcasters, third parties (NBC, MTV, SKY, Viacom, Comcast, ITV, Channel 4, Budweiser, Halifax) social widgets, viral games and wireframes.",
+    "links": [
+      {
+        "text": "beamly.com",
+        "href": "https://www.beamly.com/"
+      }
+    ],
     "examples": [
       {
         "title": "Beamly articles & show page",
@@ -289,7 +323,88 @@
   {
     "id": "surfaceView",
     "title": "Surface View",
-    "description": "",
+    "description": "Surface View are an online e-commerce website. They specialise in bringing a range of print products such as canvases, murals, blinds epic posters and more on a scale that can be seen in and around the home, office or unique personal space. The Surface View brand is aimed at high end market consumers with a love of design and or a keen eye for beautiful imagery.\nThe challenge for the design team I worked with at Engage was to create a user experience that would allow the customer to choose an image that could be applied across the Surface View product range and tailored to suit the needs of the customer . Part of the task would be to display a high end visual user experience through well thought layout and assets.\nThe brief presented to me was to assist the design team in creating assets for the website, content management, imagery cropping and resizing, participating in the product shoots and user research. The assets were to be done to a pixel perfect high standard that displayed beautifully with in the design of the website.\nWorking on this project was both enlightening and inspiring. It enhanced my skill set and design values. It gave perfect opportunity to learn and work with in a great team that both encouraged and displayed great high-end user interface design.",
+    "links": [
+      {
+        "text": "surfaceview.co.uk",
+        "href": "https://www.surfaceview.co.uk/"
+      }
+    ],
+    "examples": [
+      {
+        "title": "Category page nd navigation",
+        "images": [
+          {
+            "id": "categoryPage1",
+            "alt": "Category page nd navigation",
+            "bgColour": "#edf2e8"
+          }
+        ]
+      },
+      {
+        "title": "Product room lock ups",
+        "images": [
+          {
+            "id": "furniture1",
+            "alt": "Product room lock ups",
+            "bgColour": "",
+            "padding": "40px 0 0"
+          }
+        ]
+      },
+      {
+        "title": "Product page",
+        "images": [
+          {
+            "id": "productPage",
+            "alt": "Product page",
+            "bgColour": "#10253d"
+          }
+        ]
+      },
+      {
+        "title": "Product room lock ups",
+        "images": [
+          {
+            "id": "furniture2",
+            "alt": "Product room lock ups",
+            "bgColour": "",
+            "padding": "40px 0 0"
+          }
+        ]
+      },
+      {
+        "title": "Articles",
+        "images": [
+          {
+            "id": "article",
+            "alt": "Articles",
+            "bgColour": "#998d7f"
+          }
+        ]
+      },
+      {
+        "title": "Product room lock ups",
+        "images": [
+          {
+            "id": "furniture3",
+            "alt": "Product room lock ups",
+            "bgColour": "",
+            "padding": "40px 0 0"
+          }
+        ]
+      },
+      {
+        "title": "Brand category and product category",
+        "images": [
+          {
+            "id": "categoryPage2",
+            "alt": "Brand category and product category",
+            "bgColour": "#314c84"
+          }
+        ]
+      }
+    ],
     "bgColour": "#2d2d2d",
     "route": "/projects/surface-view"
   },
@@ -298,6 +413,7 @@
     "title": "No1 Traveller",
     "description": "",
     "bgColour": "#DEFBFF",
-    "route": "/projects/no1-traveller"
+    "route": "/projects/no1-traveller",
+    "disabled": true
   }
 ]

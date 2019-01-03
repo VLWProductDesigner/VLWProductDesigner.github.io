@@ -19,7 +19,8 @@
     "react-dom": "^16.6.3",
     "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
-    "react-sticky": "^6.0.3"
+    "react-sticky": "^6.0.3",
+    "react-transition-group": "^2.5.2"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",

@@ -7,7 +7,7 @@
 
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 65px 30px 30px;
+    padding: 30px;
 }
 
 .description
@@ -29,6 +29,34 @@
 {
     margin: 30px auto 0;
 }
+
+.copy p
+{
+    margin: 0 auto;
+}
+
+.copy p + p
+{
+    margin-top: 16px;
+}
+
+.copy ul
+{
+    margin: 16px 0 auto;
+    padding: 0;
+
+    list-style: none;
+}
+
+.link
+{
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #1f1f1f;
+}
+
 
 .examples
 {
@@ -65,8 +93,117 @@
     font-size: 16px;
     font-weight: 400;
 
+    box-sizing: border-box;
     margin: 0;
     padding: 80px 0 0 20px;
 
     writing-mode: vertical-lr;
+}
+
+@media (max-width: 768px)
+{
+    .container
+    {
+        flex-direction: column;
+
+        padding: 30px 0;
+    }
+
+    .description
+    {
+        position: relative;
+
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        padding: 0 30px;
+    }
+
+    .copy
+    {
+        display: -webkit-box;
+        overflow: hidden;
+        /* autoprefixer: off */
+        -webkit-box-orient: vertical;
+
+        max-height: 240px;
+        margin-bottom: 48px;
+
+        transition: max-height .3s ease-in-out;
+        text-overflow: ellipsis;
+
+        -webkit-line-clamp: 10;
+    }
+
+    .copy:after
+    {
+        font-weight: 500;
+
+        position: absolute;
+        bottom: 0;
+
+        display: block;
+
+        content: 'Read more';
+    }
+
+    .copy.isActive
+    {
+        max-height: 2000px;
+        margin-bottom: 0;
+
+        -webkit-line-clamp: unset;
+    }
+
+    .copy.isActive:after
+    {
+        display: none;
+
+        content: '';
+    }
+
+    .examples
+    {
+        margin-top: 30px;
+        padding-left: 0;
+    }
+
+    .example
+    {
+        flex-direction: column-reverse;
+    }
+
+    .example > div > div
+    {
+        padding: 0!important;
+    }
+
+    .imageWrapper
+    {
+        padding: 30px;
+    }
+
+    .imageWrapper:first-of-type
+    {
+        padding-top: 60px;
+    }
+
+    .subtitle
+    {
+        line-height: 2.8;
+
+        margin-bottom: -54px;
+        padding: 5px 10px;
+
+        text-align: center;
+
+        color: #2d2d2d;
+
+        writing-mode: initial;
+    }
+
+    .subtitle[style*='fixed']
+    {
+        background-color: rgba(255, 255, 255, .5);
+    }
 }

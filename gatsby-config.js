@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Vicki Louise Ward',
     tagline: 'Product Designer',
+    masonaryTitle: 'Other Projects',
     copyright: `Copyright © ${new Date().getFullYear()} Vicki Louise Ward`,
   },
   plugins: [

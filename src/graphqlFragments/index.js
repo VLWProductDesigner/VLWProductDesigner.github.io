@@ -7,3 +7,23 @@ export const simpleImage = graphql`
     }
   }
 `
+
+export const projectFeature = graphql`
+  fragment projectFeature on ProjectsJson {
+    title
+    description
+    links {
+      text
+      href
+    }
+    examples {
+      title
+      images {
+        id
+        alt
+        bgColour
+        padding
+      }
+    }
+  }
+`

@@ -3,14 +3,24 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Headroom from 'react-headroom'
-import styles from './style.module.css'
 import Header from '../Header/'
 import Nav from '../Nav/'
 import Footer from '../Footer/'
+import styles from './style.module.css'
 
 class Frame extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.pageElement = React.createRef()
+  }
+
+  componentDidMount() {
+    this.pageElement.current.classList.add(styles.isLoaded)
+  }
+
   render() {
-    const { children } = this.props
+    const { hideHeaderMobile, children } = this.props
     return (
       <StaticQuery
         query={graphql`
@@ -50,7 +60,10 @@ class Frame extends React.Component {
               </Helmet>
               <section className={styles.frame}>
                 <Headroom disableInlineStyles>
-                  <section className={styles.header}>
+                  <section
+                    className={`${styles.header} ${hideHeaderMobile &&
+                      styles.isHidden}`}
+                  >
                     <Header
                       title={siteMetadata.title}
                       tagline={siteMetadata.tagline}
@@ -58,7 +71,9 @@ class Frame extends React.Component {
                     <Nav items={navItems} />
                   </section>
                 </Headroom>
-                <section className={styles.page}>{children}</section>
+                <section ref={this.pageElement} className={styles.page}>
+                  {children}
+                </section>
                 <Footer copyright={siteMetadata.copyright} />
               </section>
             </React.Fragment>
@@ -70,6 +85,7 @@ class Frame extends React.Component {
 }
 
 Frame.propTypes = {
+  hideHeaderMobile: PropTypes.bool,
   children: PropTypes.node.isRequired,
 }
 

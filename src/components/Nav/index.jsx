@@ -10,17 +10,14 @@ class Nav extends React.Component {
     return (
       <Location>
         {({ location }) => (
-          <nav>
+          <nav className={styles.nav}>
             <ul className={styles.list}>
               {items.map(item => (
                 <li key={item.node.id} className={styles.item}>
                   <Link
                     to={item.node.route}
-                    className={`${styles.link} ${
-                      location.pathname === item.node.route
-                        ? styles.isActive
-                        : ''
-                    }`}
+                    className={`${styles.link} ${location.pathname ===
+                      item.node.route && styles.isActive}`}
                   >
                     {item.node.page}
                   </Link>

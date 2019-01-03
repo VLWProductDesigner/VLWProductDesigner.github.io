@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import ProjectTeaser from '../ProjectTeaser'
 import styles from './style.module.css'
@@ -43,10 +44,17 @@ class Masonary extends React.Component {
   }
 
   render() {
+    const { showHeader, hideProjectMobile } = this.props
+
     return (
       <StaticQuery
         query={graphql`
           query {
+            site {
+              siteMetadata {
+                masonaryTitle
+              }
+            }
             allProjectsJson {
               edges {
                 node {
@@ -54,6 +62,7 @@ class Masonary extends React.Component {
                   title
                   bgColour
                   route
+                  disabled
                 }
               }
             }
@@ -85,22 +94,36 @@ class Masonary extends React.Component {
           }
         `}
         render={data => {
+          const title = data.site.siteMetadata.masonaryTitle
           const projects = data.allProjectsJson.edges
           return (
-            <section ref={this.masonaryElement} className={styles.container}>
-              {projects.map(project => (
-                <ProjectTeaser
-                  key={project.node.id}
-                  content={project.node}
-                  image={data[project.node.id]}
-                />
-              ))}
+            <section className={styles.masonary}>
+              {showHeader && <h2 className={styles.title}>{title}</h2>}
+              <section ref={this.masonaryElement} className={styles.container}>
+                {projects.map(project => {
+                  return (
+                    <ProjectTeaser
+                      key={project.node.id}
+                      content={project.node}
+                      image={data[project.node.id]}
+                      hideOnMobile={
+                        hideProjectMobile === project.node.id ? true : false
+                      }
+                    />
+                  )
+                })}
+              </section>
             </section>
           )
         }}
       />
     )
   }
+}
+
+Masonary.propTypes = {
+  showHeader: PropTypes.bool,
+  hideProjectMobile: PropTypes.string,
 }
 
 export default Masonary

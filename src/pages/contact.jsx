@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import Frame from '../components/Frame'
 import styles from '../styles/contact.module.css'
 
@@ -28,13 +28,14 @@ class ContactPage extends React.Component {
                 {contactInfo.map(contact => {
                   if (contact.node.method === 'LinkedIn') {
                     return (
-                      <Link
+                      <a
                         key={contact.node.id}
-                        to={contact.node.value}
+                        href={contact.node.value}
                         className={styles.link}
+                        target={'_blank'}
                       >
                         {contact.node.method}
-                      </Link>
+                      </a>
                     )
                   }
 

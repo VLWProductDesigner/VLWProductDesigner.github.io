@@ -19,3 +19,11 @@
 
     color: #999;
 }
+
+@media (max-width: 768px)
+{
+    .tagline
+    {
+        text-align: center;
+    }
+}

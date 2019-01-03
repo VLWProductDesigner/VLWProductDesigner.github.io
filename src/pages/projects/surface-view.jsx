@@ -10,27 +10,40 @@ class Project extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            projectsJson(id: { eq: "beamly" }) {
+            projectsJson(id: { eq: "surfaceView" }) {
               ...projectFeature
             }
-            articles: file(relativePath: { eq: "beamly/articles.png" }) {
+            article: file(relativePath: { eq: "surface-view/article.png" }) {
               ...fluidImage
             }
-            iosApp: file(relativePath: { eq: "beamly/ios-app.png" }) {
-              ...fluidImage
-            }
-            showPages: file(relativePath: { eq: "beamly/show-pages.png" }) {
-              ...fluidImage
-            }
-            techBlog: file(relativePath: { eq: "beamly/tech-blog.png" }) {
-              ...fluidImage
-            }
-            treatmentDesign: file(
-              relativePath: { eq: "beamly/treatment-design.png" }
+            categoryPage1: file(
+              relativePath: { eq: "surface-view/category-page-1.png" }
             ) {
               ...fluidImage
             }
-            web: file(relativePath: { eq: "beamly/web.png" }) {
+            categoryPage2: file(
+              relativePath: { eq: "surface-view/category-page-2.png" }
+            ) {
+              ...fluidImage
+            }
+            furniture1: file(
+              relativePath: { eq: "surface-view/furniture-1.png" }
+            ) {
+              ...fluidImage
+            }
+            furniture2: file(
+              relativePath: { eq: "surface-view/furniture-2.png" }
+            ) {
+              ...fluidImage
+            }
+            furniture3: file(
+              relativePath: { eq: "surface-view/furniture-3.png" }
+            ) {
+              ...fluidImage
+            }
+            productPage: file(
+              relativePath: { eq: "surface-view/product-page.png" }
+            ) {
               ...fluidImage
             }
           }
@@ -47,7 +60,7 @@ class Project extends React.Component {
           return (
             <Frame hideHeaderMobile>
               <ProjectFeature content={content} />
-              <Masonary showHeader hideProjectMobile={'beamly'} />
+              <Masonary showHeader hideProjectMobile={'surfaceView'} />
             </Frame>
           )
         }}

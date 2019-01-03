@@ -11,17 +11,7 @@ class Project extends React.Component {
         query={graphql`
           query {
             projectsJson(id: { eq: "asos" }) {
-              title
-              description
-              examples {
-                title
-                images {
-                  id
-                  alt
-                  bgColour
-                  padding
-                }
-              }
+              ...projectFeature
             }
             fashionDiscovery1: file(
               relativePath: { eq: "asos/fashion-discovery-1.png" }
@@ -117,9 +107,9 @@ class Project extends React.Component {
           )
 
           return (
-            <Frame>
+            <Frame hideHeaderMobile>
               <ProjectFeature content={content} />
-              <Masonary />
+              <Masonary showHeader hideProjectMobile={'asos'} />
             </Frame>
           )
         }}

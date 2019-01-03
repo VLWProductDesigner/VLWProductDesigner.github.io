@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500');
 
 :global(body)
 {
@@ -73,18 +73,26 @@
 .page
 {
     flex: 1 0 auto;
-    animation: FadeIn .7s ease-in-out forwards;
+
+    transition: opacity .7s ease-in-out;
+
+    opacity: 0;
 }
 
-@keyframes FadeIn
+.page.isLoaded
 {
-    0%
+    opacity: 1;
+}
+
+@media (max-width: 768px)
+{
+    .header
     {
-        opacity: 0;
+        flex-direction: column;
     }
 
-    100%
+    .header.isHidden
     {
-        opacity: 1;
+        display: none;
     }
 }

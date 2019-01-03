@@ -11,17 +11,7 @@ class Project extends React.Component {
         query={graphql`
           query {
             projectsJson(id: { eq: "immediate" }) {
-              title
-              description
-              examples {
-                title
-                images {
-                  id
-                  alt
-                  bgColour
-                  padding
-                }
-              }
+              ...projectFeature
             }
             articles: file(relativePath: { eq: "immediate/articles.png" }) {
               ...fluidImage
@@ -65,9 +55,9 @@ class Project extends React.Component {
           )
 
           return (
-            <Frame>
+            <Frame hideHeaderMobile>
               <ProjectFeature content={content} />
-              <Masonary />
+              <Masonary showHeader hideProjectMobile={'immediate'} />
             </Frame>
           )
         }}
